@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Fredoka', 'Nunito', Verdana, sans-serif;
+    --font-ui: 'Nunito', 'Andika', Verdana, Arial, sans-serif;
+    --font-word: 'Andika', Verdana, Arial, sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-ui);
+    background-color: #e0f2fe;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-word {
+  font-family: var(--font-word);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes gentle-shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(-7px, 0, 0);
+  }
+  40% {
+    transform: translate3d(7px, 0, 0);
+  }
+  60% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  80% {
+    transform: translate3d(5px, 0, 0);
+  }
+}
+
+.animate-gentle-shake {
+  animation: gentle-shake 0.32s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes float-up-fade {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0) scale(0.95);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(-50%, -14px, 0) scale(1.08);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -44px, 0) scale(1);
+  }
+}
+
+.animate-float-up-fade {
+  animation: float-up-fade 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cloud-drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(14px, -4px, 0);
+  }
+}
+
+.animate-cloud-drift {
+  animation: cloud-drift 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-gentle-shake,
+  .animate-float-up-fade,
+  .animate-cloud-drift {
+    animation: none !important;
+  }
+}

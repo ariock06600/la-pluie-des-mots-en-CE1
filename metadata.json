@@ -1,0 +1,6 @@
+{
+  "name": "Pluie de Mots CE1",
+  "description": "Jeu éducatif et ludique d'apprentissage du clavier AZERTY et de la dactylographie pour les élèves de CE1 (7-8 ans).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
